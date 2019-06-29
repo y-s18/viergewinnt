@@ -4,8 +4,8 @@ import Spiel.Token.Color;
 
 public abstract class Game {
 	private Bord bord;
-	private Player redPlayer = new ConsolePlayer(Color.RED, bord);
-	private Player yellowPlayer = new ConsolePlayer(Color.YELLOW, bord);
+	private Player redPlayer;
+	private Player yellowPlayer;
 	private Player currentPlayer;
 	
 	public Game(Bord bord) {
@@ -19,6 +19,34 @@ public abstract class Game {
 			currentPlayer = redPlayer;
 		}
 	}
+	public Bord getBord() {
+		return bord;
+	}
 
+	public void setRedPlayer(Player redPlayer) {
+		this.redPlayer = redPlayer;
+	}
+
+	public void setYellowPlayer(Player yellowPlayer) {
+		this.yellowPlayer = yellowPlayer;
+	}
+
+	public void setCurrentPlayer(Player currentPlayer) {
+		this.currentPlayer = currentPlayer;
+	}
+
+	public abstract void doGame(Player player1, Player player2);
+
+	public Player getRedPlayer() {
+		return redPlayer;
+	}
+
+	public Player getYellowPlayer() {
+		return yellowPlayer;
+	}
+
+	public Player getCurrentPlayer() {
+		return currentPlayer;
+	}
 
 }
