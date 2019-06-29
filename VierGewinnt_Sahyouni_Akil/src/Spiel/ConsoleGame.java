@@ -20,7 +20,10 @@ public class ConsoleGame extends Game {
 		}
 		for(int i = 0;i<=41;i++) {
 			if(this.getCurrentPlayer() == this.getRedPlayer()) {
+				System.out.println("Spieler X, was ist dein nächster Zug?");
+				System.out.print("Eingabe: ");
 				this.getRedPlayer().doTurn();
+				
 				this.swapPlayer();
 				this.getBord().toString();
 				if(this.getBord().testVictory() == Winner.RED 
@@ -30,7 +33,10 @@ public class ConsoleGame extends Game {
 				}
 				
 			}else {
+				System.out.println("Spieler O, was ist dein nächster Zug?");
+				System.out.print("Eingabe: ");
 				this.getYellowPlayer().doTurn();
+				
 				this.swapPlayer();
 				this.getBord().toString();
 				if(this.getBord().testVictory() == Winner.YELLOW 
