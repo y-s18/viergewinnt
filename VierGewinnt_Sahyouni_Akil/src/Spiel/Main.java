@@ -19,7 +19,7 @@ import exceptions.*;
 public class Main {
 	/**Einstiegsmethode, legt 4 Objekte vom Typ Bord an und arbeitet mit diesen */ 
 	public static void main(String[] args) throws ColumnFullException, IllegalMoveException {
-		
+
 		Bord bord1 = new Bord();
 		Bord bord2 = new Bord();
 		Bord bord3 = new Bord();

@@ -3,8 +3,24 @@ import Spiel.Token.Color;
 import exceptions.*;
 public abstract class Player {
 	private Color color;
-	private Bord bord;
+	private Bord bord = new Bord();
 	
+	public void setColor(Color color) {
+		this.color = color;
+	}
+
+	public void setBord(Bord bord) {
+		this.bord = bord;
+	}
+
+	public Color getColor() {
+		return color;
+	}
+
+	public Bord getBord() {
+		return bord;
+	}
+
 	public Player(Color color, Bord bord) {
 		this.color = color;
 		this.bord = bord;
