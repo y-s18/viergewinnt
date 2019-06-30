@@ -35,15 +35,14 @@ public class Bord extends GameObjekt {
 			yellowTokens.add(yellowToken);
 		}
 		cells = new Cell[6][7];
-		for(int i =0; i<cells.length; i++) {
+		for(int i = 0; i<cells.length; i++) {
 			for(int j =0; j< cells[i].length;j++) {
 				cells[i][j] = new Cell();
 			}
 		}
 	}
-	public Cell[][] getCells() {
-		return cells;
-	}
+	/**Getter */
+	public Cell[][] getCells() {return cells;}
 	/** gibt das Spielbett als String auf der Konsole aus. */
 	public String toString() {
 		
@@ -55,6 +54,7 @@ public class Bord extends GameObjekt {
 			}
 			System.out.println();
 		}
+		System.out.println("[0][1][2][3][4][5][6]");
 		System.out.println();
 		return "";
 	}
@@ -257,5 +257,29 @@ public class Bord extends GameObjekt {
 			hasToken = (!yellowTokens.isEmpty());
 		}
 		return hasToken;
+	}
+	/**
+	 * Diese Methode zaehlt die redTokens, die noch in der ArrayList(redTokens) vorhanden sind.
+	 * 
+	 * @return redCounter, ist ein Integer Wert, der Anzahl der redToken ist
+	 */
+	public int countRedTokens() {
+		int redCounter = 0;
+		for(int i = 0;i < this.redTokens.size();i++) {
+			redCounter = i;
+		}
+		return redCounter + 1;
+	}
+	/**
+	 * Diese Methode zaehlt die yellowTokens, die noch in der ArrayList(yellowTokens) vorhanden sind.
+	 * 
+	 * @return yellowCounter, ist ein Integer Wert, der Anzahl der yellowToken ist
+	 */
+	public int countYellowTokens() {
+		int yellowCounter = 0;
+		for(int i = 0;i < this.yellowTokens.size();i++) {
+			yellowCounter = i;
+		}
+		return yellowCounter + 1;
 	}
 }
