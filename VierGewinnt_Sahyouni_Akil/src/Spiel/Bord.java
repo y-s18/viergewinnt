@@ -265,10 +265,10 @@ public class Bord extends GameObjekt {
 	 */
 	public int countRedTokens() {
 		int redCounter = 0;
-		for(int i = 0;i < this.redTokens.size();i++) {
+		for(int i = -1;i < this.redTokens.size();i++) {
 			redCounter = i;
 		}
-		return redCounter + 1;
+		return redCounter;
 	}
 	/**
 	 * Diese Methode zaehlt die yellowTokens, die noch in der ArrayList(yellowTokens) vorhanden sind.
@@ -277,9 +277,9 @@ public class Bord extends GameObjekt {
 	 */
 	public int countYellowTokens() {
 		int yellowCounter = 0;
-		for(int i = 0;i < this.yellowTokens.size();i++) {
+		for(int i = -1;i < this.yellowTokens.size();i++) {
 			yellowCounter = i;
 		}
-		return yellowCounter + 1;
+		return yellowCounter;
 	}
 }

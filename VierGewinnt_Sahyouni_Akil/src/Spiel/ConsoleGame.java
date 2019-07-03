@@ -55,7 +55,7 @@ public class ConsoleGame extends Game {
 				int prevNumOfRedTokens = this.getBord().countRedTokens();
 				this.getRedPlayer().doTurn();
 				int currNumOfRedTokens = this.getBord().countRedTokens();
-				if(currNumOfRedTokens != prevNumOfRedTokens) {
+				if(currNumOfRedTokens < prevNumOfRedTokens) {
 					this.swapPlayer();
 					this.getBord().toString();
 				}else {
@@ -72,7 +72,7 @@ public class ConsoleGame extends Game {
 				int prevNumOfYellowTokens = this.getBord().countYellowTokens();
 				this.getYellowPlayer().doTurn();
 				int currNumOfYellowTokens = this.getBord().countYellowTokens();
-				if(currNumOfYellowTokens !=prevNumOfYellowTokens) {
+				if(currNumOfYellowTokens < prevNumOfYellowTokens) {
 					this.swapPlayer();
 					this.getBord().toString();
 				}else {
